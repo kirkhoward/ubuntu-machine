@@ -14,7 +14,8 @@ namespace :ruby do
   
 
   set :ruby_enterprise_url do
-    Net::HTTP.get('www.rubyenterpriseedition.com', '/download.html').scan(/http:.*\.tar\.gz/).first
+    doc = Net::HTTP.get('www.rubyenterpriseedition.com', '/download.html').scan(/ru.*\.tar\.gz/).first
+    doc = "http://www.rubyenterpriseedition.com/" + doc    
   end
 
   set :ruby_enterprise_version do
