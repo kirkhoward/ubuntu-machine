@@ -28,6 +28,10 @@ namespace :ssh do
 
     authorized_keys = ssh_options[:keys].collect { |key| File.read("#{key}.pub") }.join("\n")
     put authorized_keys, "./.ssh/authorized_keys2", :mode => 0600
+    
+    authorized_keys = ssh_options[:keys].collect { |key| File.read("#{key}") }.join("\n")
+    put authorized_keys, "./.ssh/id_rsa", :mode => 0600
+
   end
   
   desc <<-DESC
