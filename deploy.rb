@@ -27,8 +27,8 @@ set :default_local_files_path, "YOUR_LOCAL_PATH_TO_UPLOAD_DOWNLOAD_FILES"
 # SOFTWARE INSTALL CONFIGURATION
 
 # version numbers
-# set :ruby_enterprise_version, "ruby-enterprise-1.8.6-20090113" -> not needed anymore the latest version if automatically fetched
-# set :passenger_version, "2.0.6" -> not needed anymore the latest version if automatically fetched
+# set :ruby_enterprise_version, "ruby-enterprise-1.8.6-20090113" -> not needed anymore the latest version if automatically fetched, but there are bugs (ruby.rb)
+# set :passenger_version, "2.0.6" -> not needed anymore the latest version if automatically fetched, but there are bugs (git.rb)
 set :rubygem_version, "1.3.1"
 set :git_version, "git-1.6.0.6"
 
